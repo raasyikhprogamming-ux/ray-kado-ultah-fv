@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Starlight Wish for My Bestie ✨</title>
+    <!-- Memuat Tailwind CSS untuk styling Gen Z yang responsif dan modern -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Menggunakan font yang estetik dan mudah dibaca */
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600;800&display=swap');
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #0c0b1a; /* Midnight Black Blue */
+            color: #f0f8ff; /* Almost white */
+            overflow-x: hidden;
+            position: relative;
+            min-height: 100vh;
+        }
+
+        /* Custom CSS untuk Efek Langit Berbintang (Simple Star Effect) */
+        .starlight-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 0;
+            /* Radial Gradient untuk efek kedalaman langit malam */
+            background: radial-gradient(ellipse at bottom, #1B2735 0%, #090A0F 100%);
+        }
+
+        /* Animasi Kursor Typing */
+        .typing-cursor {
+            border-right: 2px solid #a855f7; /* Warna cursor neon ungu */
+            animation: blink-caret 0.75s step-end infinite;
+        }
+
+        @keyframes blink-caret {
+            from, to { border-color: transparent }
+            50% { border-color: #a855f7 }
+        }
+
+        /* Efek Neon Glow pada Teks Utama */
+        .neon-glow {
+            text-shadow: 0 0 5px #f0abfc, 0 0 15px #f0abfc, 0 0 30px #a855f7;
+            transition: all 0.3s ease-in-out;
+        }
+        
+        /* Styling untuk Gambar Kue */
+        .cake-image {
+            width: 100%;
+            max-width: 250px; /* Ukuran yang pas untuk tampilan mobile */
+            height: auto;
+            border-radius: 15px;
+            margin: 20px auto;
+            /* Memberi sedikit bayangan estetik */
+            box-shadow: 0 0 15px rgba(255, 105, 180, 0.4);
+        }
+
+        /* Styling untuk pesan yang panjang (agar lebih mudah dibaca) */
+        .long-message {
+            text-align: left;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    
+    <!-- Latar Belakang Langit Berbintang -->
+    <div class="starlight-background"></div>
+
+    <div class="relative z-10 flex flex-col items-center justify-center min-h-screen p-4 sm:p-8">
+        
+        <!-- Kartu Utama Ulang Tahun -->
+        <div class="w-full max-w-lg p-6 sm:p-10 bg-gray-900/80 backdrop-blur-sm rounded-3xl shadow-2xl border border-purple-600/50 transform hover:scale-[1.02] transition-transform duration-500 ease-in-out">
+            
+            <!-- Area Typing Effect -->
+            <div class="mb-8 h-20 flex items-center justify-center">
+                <!-- Teks akan muncul di sini oleh JavaScript -->
+                <h1 id="typing-text" class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white text-center neon-glow"></h1>
+            </div>
+
+            <p class="text-purple-300 text-lg mb-8 italic">Scroll pelan-pelan, ada surprise spesial buat kamu 🫶</p>
+
+            <!-- 1. Bunga & Aesthetic Section (Foto Kue Nada) -->
+            <div class="my-10 p-6 bg-gray-800/70 rounded-2xl shadow-lg border-l-4 border-l-orange-400">
+                
+                <!-- PENTING: GANTI URL placeholder INI DENGAN LINK FOTO KUE ASLI ANDA -->
+                <img 
+                    src="kue ultah.jpg" 
+                    alt="Kue Ulang Tahun Nada Putri Sabiilah" 
+                    class="cake-image mx-auto"
+                >
+
+                <h2 class="text-2xl font-bold text-orange-300 neon-glow mb-3">Vibe Check: Bunga & Kue 🎂</h2>
+                <p class="text-gray-300">
+                    Kuenya cantik, bunganya estetik. Tapi ini semua tetap gak bisa menandingi aura <span class="font-extrabold text-white">Main Character</span> yang kamu punya. 
+                </p>
+                <p class="text-gray-300 mt-2 italic font-semibold">
+                    Di usia 19 tahun, kamu <span class="font-extrabold text-white">Definisi Flawless</span>, sibuk Akuntansi tapi tetap jadi Duta FEB. Kamu keren banget!
+                </p>
+            </div>
+
+            <!-- 2. Pesan Langit Malam (Pesan Lama, Tentang Wish dan Manifestasi) -->
+            <div class="my-10 p-6 bg-gray-800/70 rounded-2xl shadow-lg border-r-4 border-r-indigo-400">
+                <div class="text-4xl mb-4" aria-label="Langit Malam">
+                    🌙
+                </div>
+                <h2 class="text-2xl font-bold text-indigo-300 neon-glow mb-3">A Wish Under The Starry Sky</h2>
+                <p class="text-gray-300">
+                    Selamat ulang tahun, Cewek Keren! Semoga semua target organisasi dan manifestasi impian kamu di tahun ini terwujud. Ingat, <span class="font-extrabold text-white">it's your world</span>, kita cuma numpang vibe. Kamu sangat dicintai dan menginspirasi! ❤️
+                </p>
+            </div>
+
+            <!-- 3. Pesan Tambahan (The Deep Dive Message) -->
+            <div class="my-10 p-6 bg-gray-800/70 rounded-2xl shadow-lg border-l-4 border-l-pink-400">
+                <div class="text-4xl mb-4" aria-label="Deep Dive">
+                    📝
+                </div>
+                <h2 class="text-2xl font-bold text-pink-300 neon-glow mb-3">The Deep Dive Message</h2>
+                <p class="text-gray-300 long-message">
+                    Selamat bertambah usia, perempuan kuat, perempuan cantik, perempuan cerdas, perempuan baik, perempuan manis. Perempuan yang selalu tersenyum, perempuan sederhana, yang terkadang menjadi seorang komedian untuk dirinya dan orang lain. Perempuan yang kalian sayangi dan senang harinya ke sajak. Semoga keberkahan selalu menyertai di setiap langkahmu, dan tetaplah bahagia.
+                </p>
+            </div>
+
+
+            <!-- Tombol Kado (Gift Reveal) -->
+            <div class="mt-10">
+                <button id="gift-button" class="genz-button w-full px-8 py-4 bg-fuchsia-600 text-white text-xl font-bold rounded-full shadow-lg hover:bg-fuchsia-500 transition duration-300 transform hover:-translate-y-1">
+                    🔓 INI DIA, KADO DARI AKU 🎁
+                </button>
+            </div>
+
+            <!-- Area Kado Tersembunyi (Akan Muncul Setelah Klik) -->
+            <div id="secret-gift" class="mt-6 p-5 bg-pink-900/50 border border-pink-500 rounded-xl hidden">
+                <h3 class="text-pink-300 text-xl font-bold mb-3">OH MY GOSH! You're the best!</h3>
+                <!-- LINK KADO SUDAH FINAL DENGAN URL YANG ANDA BERIKAN -->
+                <p class="text-white">
+                    Ini link kado spesial kamu. Semoga suka ya! Pokoknya <span class="font-extrabold text-white">VIBESNYA DAPET!</span>
+                    <a href="https://raasyikhprogamming-ux.github.io/ray-kado-ultah/" target="_blank" class="text-yellow-400 underline hover:text-yellow-300 break-words font-bold">
+                        SPOILER ALERT: Klik Di Sini!
+                    </a>
+                </p>
+            </div>
+
+        </div>
+        
+        <!-- Footer Gen Z -->
+        <footer class="mt-8 text-center text-gray-500 text-sm">
+            <p>&copy; 2024 Vibe Check Successful. Created with 💜</p>
+        </footer>
+    </div>
+
+    <!-- JavaScript untuk Efek Typing dan Interaksi -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const typingElement = document.getElementById('typing-text');
+            const fullText = "Woy! Stop! There's a message for the Birthday Queen 👑!";
+            let index = 0;
+            let cursor = document.createElement('span');
+            cursor.className = 'typing-cursor';
+            
+            typingElement.appendChild(cursor);
+
+            function typeWriter() {
+                if (index < fullText.length) {
+                    typingElement.textContent = fullText.substring(0, index + 1); 
+                    typingElement.appendChild(cursor); 
+                    index++;
+                    setTimeout(typeWriter, 100); 
+                } else {
+                    cursor.style.borderRight = 'none';
+                }
+            }
+            typeWriter();
+
+            // Logika Tombol Kado
+            const giftButton = document.getElementById('gift-button');
+            const secretGift = document.getElementById('secret-gift');
+
+            giftButton.addEventListener('click', function() {
+                secretGift.classList.toggle('hidden');
+                
+                if (!secretGift.classList.contains('hidden')) {
+                    giftButton.textContent = "🥳 KADONYA SUDAH TERBONGKAR! 🎉";
+                    giftButton.classList.remove('bg-fuchsia-600', 'hover:bg-fuchsia-500');
+                    giftButton.classList.add('bg-green-600', 'hover:bg-green-500');
+                } else {
+                    giftButton.textContent = "🔓 INI DIA, KADO DARI AKU 🎁";
+                    giftButton.classList.remove('bg-green-600', 'hover:bg-green-500');
+                    giftButton.classList.add('bg-fuchsia-600', 'hover:bg-fuchsia-500');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

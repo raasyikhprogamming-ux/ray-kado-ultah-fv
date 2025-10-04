@@ -59,10 +59,16 @@
             /* Memberi sedikit bayangan estetik */
             box-shadow: 0 0 15px rgba(255, 105, 180, 0.4);
         }
+
+        /* Styling untuk pesan yang panjang (agar lebih mudah dibaca) */
+        .long-message {
+            text-align: left;
+            line-height: 1.6;
+        }
     </style>
 </head>
 <body>
-
+    
     <!-- Latar Belakang Langit Berbintang -->
     <div class="starlight-background"></div>
 
@@ -79,14 +85,14 @@
 
             <p class="text-purple-300 text-lg mb-8 italic">Scroll pelan-pelan, ada surprise spesial buat kamu 🫶</p>
 
-            <!-- Bunga & Aesthetic Section (Foto Kue Nada) -->
+            <!-- 1. Bunga & Aesthetic Section (Foto Kue Nada) -->
             <div class="my-10 p-6 bg-gray-800/70 rounded-2xl shadow-lg border-l-4 border-l-orange-400">
                 
                 <!-- PENTING: GANTI URL placeholder INI DENGAN LINK FOTO KUE ASLI ANDA -->
                 <img 
                     src="kue ultah.jpg" 
                     alt="Kue Ulang Tahun Nada Putri Sabiilah" 
-                    class="cake-image mx-auto"`
+                    class="cake-image mx-auto"
                 >
 
                 <h2 class="text-2xl font-bold text-orange-300 neon-glow mb-3">Vibe Check: Bunga & Kue 🎂</h2>
@@ -98,7 +104,7 @@
                 </p>
             </div>
 
-            <!-- Pesan Langit Malam (Pesan dipersonalisasi) -->
+            <!-- 2. Pesan Langit Malam (Pesan Lama, Tentang Wish dan Manifestasi) -->
             <div class="my-10 p-6 bg-gray-800/70 rounded-2xl shadow-lg border-r-4 border-r-indigo-400">
                 <div class="text-4xl mb-4" aria-label="Langit Malam">
                     🌙
@@ -106,6 +112,17 @@
                 <h2 class="text-2xl font-bold text-indigo-300 neon-glow mb-3">A Wish Under The Starry Sky</h2>
                 <p class="text-gray-300">
                     Selamat ulang tahun, Cewek Keren! Semoga semua target organisasi dan manifestasi impian kamu di tahun ini terwujud. Ingat, <span class="font-extrabold text-white">it's your world</span>, kita cuma numpang vibe. Kamu sangat dicintai dan menginspirasi! ❤️
+                </p>
+            </div>
+
+            <!-- 3. Pesan Tambahan (The Deep Dive Message) -->
+            <div class="my-10 p-6 bg-gray-800/70 rounded-2xl shadow-lg border-l-4 border-l-pink-400">
+                <div class="text-4xl mb-4" aria-label="Deep Dive">
+                    📝
+                </div>
+                <h2 class="text-2xl font-bold text-pink-300 neon-glow mb-3">The Deep Dive Message</h2>
+                <p class="text-gray-300 long-message">
+                    Selamat bertambah usia, perempuan kuat, perempuan cantik, perempuan cerdas, perempuan baik, perempuan manis. Perempuan yang selalu tersenyum, perempuan sederhana, yang terkadang menjadi seorang komedian untuk dirinya dan orang lain. Perempuan yang kalian sayangi dan senang harinya ke sajak. Semoga keberkahan selalu menyertai di setiap langkahmu, dan tetaplah bahagia.
                 </p>
             </div>
 
@@ -141,29 +158,23 @@
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             const typingElement = document.getElementById('typing-text');
-            // Ganti pesan typing agar lebih manis dan Gen Z
             const fullText = "Woy! Stop! There's a message for the Birthday Queen 👑!";
             let index = 0;
             let cursor = document.createElement('span');
             cursor.className = 'typing-cursor';
             
-            // Tambahkan kursor ke elemen teks
             typingElement.appendChild(cursor);
 
             function typeWriter() {
                 if (index < fullText.length) {
-                    // Masukkan teks sebelum kursor
                     typingElement.textContent = fullText.substring(0, index + 1); 
                     typingElement.appendChild(cursor); 
                     index++;
-                    setTimeout(typeWriter, 100); // Kecepatan typing (100ms)
+                    setTimeout(typeWriter, 100); 
                 } else {
-                    // Hapus kursor setelah selesai
                     cursor.style.borderRight = 'none';
                 }
             }
-
-            // Memulai efek typing
             typeWriter();
 
             // Logika Tombol Kado
@@ -171,10 +182,8 @@
             const secretGift = document.getElementById('secret-gift');
 
             giftButton.addEventListener('click', function() {
-                // Tampilkan/sembunyikan pesan kado
                 secretGift.classList.toggle('hidden');
                 
-                // Ubah teks tombol setelah dibuka
                 if (!secretGift.classList.contains('hidden')) {
                     giftButton.textContent = "🥳 KADONYA SUDAH TERBONGKAR! 🎉";
                     giftButton.classList.remove('bg-fuchsia-600', 'hover:bg-fuchsia-500');
